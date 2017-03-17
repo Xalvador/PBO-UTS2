@@ -51,7 +51,6 @@ public class cruddata extends javax.swing.JFrame {
         name = new javax.swing.JTextField();
         suk = new com.toedter.calendar.JDateChooser();
         luar = new com.toedter.calendar.JDateChooser();
-        jLabel1 = new javax.swing.JLabel();
         alamat = new javax.swing.JTextField();
         no_struk = new javax.swing.JTextField();
         no_pol = new javax.swing.JTextField();
@@ -59,14 +58,87 @@ public class cruddata extends javax.swing.JFrame {
         lama = new javax.swing.JTextField();
         hitung = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        labeltanggal = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        labeltanggal = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jButton2 = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jPanel8 = new javax.swing.JPanel();
+        jPanel9 = new javax.swing.JPanel();
+        jPanel10 = new javax.swing.JPanel();
+        jPanel11 = new javax.swing.JPanel();
+        jPanel12 = new javax.swing.JPanel();
+        jPanel13 = new javax.swing.JPanel();
+        jPanel14 = new javax.swing.JPanel();
+        jPanel15 = new javax.swing.JPanel();
+        jPanel16 = new javax.swing.JPanel();
+        jPanel17 = new javax.swing.JPanel();
+        jPanel18 = new javax.swing.JPanel();
+        jPanel19 = new javax.swing.JPanel();
+        jPanel20 = new javax.swing.JPanel();
+        jPanel21 = new javax.swing.JPanel();
+        jPanel22 = new javax.swing.JPanel();
+        jPanel7 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jPanel23 = new javax.swing.JPanel();
+        jPanel24 = new javax.swing.JPanel();
+        jPanel25 = new javax.swing.JPanel();
+        jPanel26 = new javax.swing.JPanel();
+        jPanel27 = new javax.swing.JPanel();
+        jPanel28 = new javax.swing.JPanel();
+        jPanel29 = new javax.swing.JPanel();
+        jPanel30 = new javax.swing.JPanel();
+        jPanel31 = new javax.swing.JPanel();
+        jPanel32 = new javax.swing.JPanel();
+        jPanel33 = new javax.swing.JPanel();
+        jPanel34 = new javax.swing.JPanel();
+        jPanel35 = new javax.swing.JPanel();
+        jPanel36 = new javax.swing.JPanel();
+        jPanel37 = new javax.swing.JPanel();
+        jPanel38 = new javax.swing.JPanel();
+        jPanel39 = new javax.swing.JPanel();
+        jPanel40 = new javax.swing.JPanel();
+        jPanel41 = new javax.swing.JPanel();
+        jPanel42 = new javax.swing.JPanel();
+        jPanel43 = new javax.swing.JPanel();
+        jPanel44 = new javax.swing.JPanel();
+        jPanel45 = new javax.swing.JPanel();
+        jPanel46 = new javax.swing.JPanel();
+        jPanel47 = new javax.swing.JPanel();
+        jPanel48 = new javax.swing.JPanel();
+        jPanel49 = new javax.swing.JPanel();
+        jPanel50 = new javax.swing.JPanel();
+        jPanel51 = new javax.swing.JPanel();
+        jPanel52 = new javax.swing.JPanel();
+        jPanel53 = new javax.swing.JPanel();
+        jPanel54 = new javax.swing.JPanel();
+        jPanel55 = new javax.swing.JPanel();
+        jPanel56 = new javax.swing.JPanel();
+        jPanel57 = new javax.swing.JPanel();
+        jPanel58 = new javax.swing.JPanel();
+        jPanel59 = new javax.swing.JPanel();
+        jPanel60 = new javax.swing.JPanel();
+        jPanel61 = new javax.swing.JPanel();
+        jPanel62 = new javax.swing.JPanel();
+        jPanel63 = new javax.swing.JPanel();
+        jPanel64 = new javax.swing.JPanel();
+        jPanel65 = new javax.swing.JPanel();
+        jPanel66 = new javax.swing.JPanel();
+        jPanel67 = new javax.swing.JPanel();
+        jPanel68 = new javax.swing.JPanel();
+        jPanel69 = new javax.swing.JPanel();
+        jPanel70 = new javax.swing.JPanel();
 
         TA.setColumns(20);
         TA.setRows(5);
@@ -75,6 +147,7 @@ public class cruddata extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
+        cetak.setBackground(new java.awt.Color(153, 255, 255));
         cetak.setText("Print");
         cetak.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,8 +155,9 @@ public class cruddata extends javax.swing.JFrame {
             }
         });
         getContentPane().add(cetak);
-        cetak.setBounds(320, 140, 55, 23);
+        cetak.setBounds(120, 500, 100, 40);
 
+        save.setBackground(new java.awt.Color(153, 255, 153));
         save.setText("Save");
         save.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -91,8 +165,9 @@ public class cruddata extends javax.swing.JFrame {
             }
         });
         getContentPane().add(save);
-        save.setBounds(320, 100, 73, 23);
+        save.setBounds(120, 460, 100, 40);
 
+        clear.setBackground(new java.awt.Color(255, 255, 153));
         clear.setText("Clear");
         clear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -100,29 +175,27 @@ public class cruddata extends javax.swing.JFrame {
             }
         });
         getContentPane().add(clear);
-        clear.setBounds(320, 60, 57, 23);
+        clear.setBounds(220, 460, 100, 40);
         getContentPane().add(name);
-        name.setBounds(50, 70, 140, 30);
+        name.setBounds(120, 100, 200, 40);
         getContentPane().add(suk);
-        suk.setBounds(70, 230, 91, 20);
+        suk.setBounds(120, 260, 200, 40);
         getContentPane().add(luar);
-        luar.setBounds(70, 270, 91, 20);
-
-        jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(20, 360, 34, 14);
+        luar.setBounds(120, 300, 200, 40);
         getContentPane().add(alamat);
-        alamat.setBounds(50, 110, 140, 30);
+        alamat.setBounds(120, 140, 200, 40);
         getContentPane().add(no_struk);
-        no_struk.setBounds(50, 150, 140, 30);
+        no_struk.setBounds(120, 180, 200, 40);
         getContentPane().add(no_pol);
-        no_pol.setBounds(50, 190, 140, 30);
+        no_pol.setBounds(120, 220, 200, 40);
+
+        harga.setEditable(false);
         getContentPane().add(harga);
-        harga.setBounds(50, 360, 140, 30);
+        harga.setBounds(120, 420, 200, 40);
 
         lama.setEditable(false);
         getContentPane().add(lama);
-        lama.setBounds(50, 320, 140, 30);
+        lama.setBounds(120, 380, 200, 40);
 
         hitung.setText("Hitung");
         hitung.addActionListener(new java.awt.event.ActionListener() {
@@ -131,40 +204,19 @@ public class cruddata extends javax.swing.JFrame {
             }
         });
         getContentPane().add(hitung);
-        hitung.setBounds(80, 290, 63, 23);
+        hitung.setBounds(120, 340, 200, 40);
 
-        jLabel2.setText("jLabel1");
+        jLabel2.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        jLabel2.setText("Harga");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(60, 50, 34, 14);
+        jLabel2.setBounds(20, 420, 70, 40);
 
-        jLabel3.setText("jLabel1");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(40, 110, 34, 14);
-
-        jLabel4.setText("jLabel1");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(20, 150, 34, 14);
-
-        jLabel5.setText("jLabel1");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(30, 190, 34, 14);
-
-        jLabel6.setText("jLabel1");
-        getContentPane().add(jLabel6);
-        jLabel6.setBounds(40, 220, 34, 14);
-
-        jLabel7.setText("jLabel1");
-        getContentPane().add(jLabel7);
-        jLabel7.setBounds(50, 260, 34, 14);
-
-        jLabel8.setText("jLabel1");
-        getContentPane().add(jLabel8);
-        jLabel8.setBounds(30, 320, 34, 14);
-
+        labeltanggal.setFont(new java.awt.Font("Calibri Light", 0, 11)); // NOI18N
         labeltanggal.setText("TanggalNow");
         getContentPane().add(labeltanggal);
-        labeltanggal.setBounds(500, 20, 80, 30);
+        labeltanggal.setBounds(280, 10, 70, 30);
 
+        jButton1.setBackground(new java.awt.Color(255, 153, 255));
         jButton1.setText("Database");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -172,9 +224,376 @@ public class cruddata extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(320, 180, 90, 30);
+        jButton1.setBounds(220, 500, 100, 40);
 
-        setBounds(0, 0, 659, 464);
+        jLabel4.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        jLabel4.setText("Alamat");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(20, 140, 70, 40);
+
+        jLabel5.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        jLabel5.setText("No.Struk");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(20, 180, 70, 40);
+
+        jLabel6.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        jLabel6.setText("No.Pol");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(20, 220, 70, 40);
+
+        jLabel7.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        jLabel7.setText("Pinjam");
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(20, 260, 70, 40);
+
+        jLabel8.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        jLabel8.setText("Kembali");
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(20, 300, 70, 40);
+
+        jLabel9.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        jLabel9.setText("Durasi");
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(20, 380, 70, 40);
+
+        jPanel1.setBackground(new java.awt.Color(248, 187, 240));
+        jPanel1.setLayout(null);
+
+        jButton2.setBackground(new java.awt.Color(255, 102, 102));
+        jButton2.setText("EXIT");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton2);
+        jButton2.setBounds(20, 450, 200, 40);
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(100, 90, 240, 550);
+
+        jPanel2.setBackground(new java.awt.Color(225, 190, 231));
+        jPanel2.setLayout(null);
+
+        jLabel1.setFont(new java.awt.Font("Calibri Light", 0, 24)); // NOI18N
+        jLabel1.setText("VIXMI RENT");
+        jPanel2.add(jLabel1);
+        jLabel1.setBounds(130, 10, 114, 30);
+
+        jLabel10.setFont(new java.awt.Font("Calibri Light", 0, 11)); // NOI18N
+        jLabel10.setText("JL.KEBONSARI 5 NO.7J JAMBANGAN,SURABAYA ");
+        jPanel2.add(jLabel10);
+        jLabel10.setBounds(80, 40, 250, 40);
+
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(-10, 0, 390, 90);
+
+        jPanel3.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel3.setLayout(null);
+
+        jPanel8.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel3.add(jPanel8);
+        jPanel8.setBounds(0, 260, 360, 40);
+
+        jPanel9.setBackground(new java.awt.Color(224, 247, 250));
+
+        jPanel10.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel9.add(jPanel10);
+
+        jPanel3.add(jPanel9);
+        jPanel9.setBounds(0, 260, 360, 40);
+
+        jPanel11.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel11.setLayout(null);
+
+        jPanel12.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel11.add(jPanel12);
+        jPanel12.setBounds(0, 260, 360, 40);
+
+        jPanel13.setBackground(new java.awt.Color(224, 247, 250));
+
+        jPanel14.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel13.add(jPanel14);
+
+        jPanel11.add(jPanel13);
+        jPanel13.setBounds(0, 260, 360, 40);
+
+        jPanel3.add(jPanel11);
+        jPanel11.setBounds(0, 260, 360, 40);
+
+        jPanel15.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel15.setLayout(null);
+
+        jPanel16.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel15.add(jPanel16);
+        jPanel16.setBounds(0, 260, 360, 40);
+
+        jPanel17.setBackground(new java.awt.Color(224, 247, 250));
+
+        jPanel18.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel17.add(jPanel18);
+
+        jPanel15.add(jPanel17);
+        jPanel17.setBounds(0, 260, 360, 40);
+
+        jPanel19.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel19.setLayout(null);
+
+        jPanel20.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel19.add(jPanel20);
+        jPanel20.setBounds(0, 260, 360, 40);
+
+        jPanel21.setBackground(new java.awt.Color(224, 247, 250));
+
+        jPanel22.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel21.add(jPanel22);
+
+        jPanel19.add(jPanel21);
+        jPanel21.setBounds(0, 260, 360, 40);
+
+        jPanel15.add(jPanel19);
+        jPanel19.setBounds(0, 260, 360, 40);
+
+        jPanel3.add(jPanel15);
+        jPanel15.setBounds(0, 330, 360, 40);
+
+        getContentPane().add(jPanel3);
+        jPanel3.setBounds(0, 420, 360, 40);
+
+        jPanel7.setBackground(new java.awt.Color(224, 247, 250));
+        getContentPane().add(jPanel7);
+        jPanel7.setBounds(0, 180, 360, 40);
+        getContentPane().add(jPanel4);
+        jPanel4.setBounds(0, 130, 100, 100);
+
+        jPanel6.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel6.setLayout(null);
+
+        jLabel3.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        jLabel3.setText("Nama");
+        jPanel6.add(jLabel3);
+        jLabel3.setBounds(20, 10, 70, 40);
+
+        getContentPane().add(jPanel6);
+        jPanel6.setBounds(0, 90, 360, 50);
+
+        jPanel23.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel23.setLayout(null);
+
+        jPanel24.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel23.add(jPanel24);
+        jPanel24.setBounds(0, 260, 360, 40);
+
+        jPanel25.setBackground(new java.awt.Color(224, 247, 250));
+
+        jPanel26.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel25.add(jPanel26);
+
+        jPanel23.add(jPanel25);
+        jPanel25.setBounds(0, 260, 360, 40);
+
+        jPanel27.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel27.setLayout(null);
+
+        jPanel28.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel27.add(jPanel28);
+        jPanel28.setBounds(0, 260, 360, 40);
+
+        jPanel29.setBackground(new java.awt.Color(224, 247, 250));
+
+        jPanel30.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel29.add(jPanel30);
+
+        jPanel27.add(jPanel29);
+        jPanel29.setBounds(0, 260, 360, 40);
+
+        jPanel23.add(jPanel27);
+        jPanel27.setBounds(0, 260, 360, 40);
+
+        jPanel31.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel31.setLayout(null);
+
+        jPanel32.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel31.add(jPanel32);
+        jPanel32.setBounds(0, 260, 360, 40);
+
+        jPanel33.setBackground(new java.awt.Color(224, 247, 250));
+
+        jPanel34.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel33.add(jPanel34);
+
+        jPanel31.add(jPanel33);
+        jPanel33.setBounds(0, 260, 360, 40);
+
+        jPanel35.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel35.setLayout(null);
+
+        jPanel36.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel35.add(jPanel36);
+        jPanel36.setBounds(0, 260, 360, 40);
+
+        jPanel37.setBackground(new java.awt.Color(224, 247, 250));
+
+        jPanel38.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel37.add(jPanel38);
+
+        jPanel35.add(jPanel37);
+        jPanel37.setBounds(0, 260, 360, 40);
+
+        jPanel31.add(jPanel35);
+        jPanel35.setBounds(0, 260, 360, 40);
+
+        jPanel23.add(jPanel31);
+        jPanel31.setBounds(0, 330, 360, 40);
+
+        getContentPane().add(jPanel23);
+        jPanel23.setBounds(0, 340, 360, 40);
+
+        jPanel39.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel39.setLayout(null);
+
+        jPanel40.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel39.add(jPanel40);
+        jPanel40.setBounds(0, 260, 360, 40);
+
+        jPanel41.setBackground(new java.awt.Color(224, 247, 250));
+
+        jPanel42.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel41.add(jPanel42);
+
+        jPanel39.add(jPanel41);
+        jPanel41.setBounds(0, 260, 360, 40);
+
+        jPanel43.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel43.setLayout(null);
+
+        jPanel44.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel43.add(jPanel44);
+        jPanel44.setBounds(0, 260, 360, 40);
+
+        jPanel45.setBackground(new java.awt.Color(224, 247, 250));
+
+        jPanel46.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel45.add(jPanel46);
+
+        jPanel43.add(jPanel45);
+        jPanel45.setBounds(0, 260, 360, 40);
+
+        jPanel39.add(jPanel43);
+        jPanel43.setBounds(0, 260, 360, 40);
+
+        jPanel47.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel47.setLayout(null);
+
+        jPanel48.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel47.add(jPanel48);
+        jPanel48.setBounds(0, 260, 360, 40);
+
+        jPanel49.setBackground(new java.awt.Color(224, 247, 250));
+
+        jPanel50.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel49.add(jPanel50);
+
+        jPanel47.add(jPanel49);
+        jPanel49.setBounds(0, 260, 360, 40);
+
+        jPanel51.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel51.setLayout(null);
+
+        jPanel52.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel51.add(jPanel52);
+        jPanel52.setBounds(0, 260, 360, 40);
+
+        jPanel53.setBackground(new java.awt.Color(224, 247, 250));
+
+        jPanel54.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel53.add(jPanel54);
+
+        jPanel51.add(jPanel53);
+        jPanel53.setBounds(0, 260, 360, 40);
+
+        jPanel47.add(jPanel51);
+        jPanel51.setBounds(0, 260, 360, 40);
+
+        jPanel39.add(jPanel47);
+        jPanel47.setBounds(0, 330, 360, 40);
+
+        getContentPane().add(jPanel39);
+        jPanel39.setBounds(0, 260, 360, 40);
+
+        jPanel55.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel55.setLayout(null);
+
+        jPanel56.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel55.add(jPanel56);
+        jPanel56.setBounds(0, 260, 360, 40);
+
+        jPanel57.setBackground(new java.awt.Color(224, 247, 250));
+
+        jPanel58.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel57.add(jPanel58);
+
+        jPanel55.add(jPanel57);
+        jPanel57.setBounds(0, 260, 360, 40);
+
+        jPanel59.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel59.setLayout(null);
+
+        jPanel60.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel59.add(jPanel60);
+        jPanel60.setBounds(0, 260, 360, 40);
+
+        jPanel61.setBackground(new java.awt.Color(224, 247, 250));
+
+        jPanel62.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel61.add(jPanel62);
+
+        jPanel59.add(jPanel61);
+        jPanel61.setBounds(0, 260, 360, 40);
+
+        jPanel55.add(jPanel59);
+        jPanel59.setBounds(0, 260, 360, 40);
+
+        jPanel63.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel63.setLayout(null);
+
+        jPanel64.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel63.add(jPanel64);
+        jPanel64.setBounds(0, 260, 360, 40);
+
+        jPanel65.setBackground(new java.awt.Color(224, 247, 250));
+
+        jPanel66.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel65.add(jPanel66);
+
+        jPanel63.add(jPanel65);
+        jPanel65.setBounds(0, 260, 360, 40);
+
+        jPanel67.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel67.setLayout(null);
+
+        jPanel68.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel67.add(jPanel68);
+        jPanel68.setBounds(0, 260, 360, 40);
+
+        jPanel69.setBackground(new java.awt.Color(224, 247, 250));
+
+        jPanel70.setBackground(new java.awt.Color(224, 247, 250));
+        jPanel69.add(jPanel70);
+
+        jPanel67.add(jPanel69);
+        jPanel69.setBounds(0, 260, 360, 40);
+
+        jPanel63.add(jPanel67);
+        jPanel67.setBounds(0, 260, 360, 40);
+
+        jPanel55.add(jPanel63);
+        jPanel63.setBounds(0, 330, 360, 40);
+
+        getContentPane().add(jPanel55);
+        jPanel55.setBounds(0, 260, 360, 40);
+
+        setBounds(0, 0, 373, 638);
     }// </editor-fold>//GEN-END:initComponents
 
     private void saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveActionPerformed
@@ -190,7 +609,6 @@ public class cruddata extends javax.swing.JFrame {
                 luar.getDate().equals("")||
                 lama.getText().equals("")||
                 harga.getText().equals("")
-                
                 ){
             JOptionPane.showMessageDialog(this,"Hara Data Diperiksa","Error",JOptionPane.WARNING_MESSAGE);
         }else{
@@ -253,7 +671,7 @@ public class cruddata extends javax.swing.JFrame {
         String harg = harga.getText();
         String tang = labeltanggal.getText();
         
-        TA.append("		RENTAL MOTOR VIMI\n"+
+        TA.append("		RENTAL MOTOR VIXMI\n"+
 "                         JL.KEBONSARI 5 NO.7J JAMBANGAN,SURABAYA\n"+
 "--------------------------------------------------------------------------------------------------------------------- \n"+
 " No Nota: "+struk+"                                                                           Tanggal: "+tang+"\n"+
@@ -309,6 +727,11 @@ public class cruddata extends javax.swing.JFrame {
         new ruddata().show();
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -352,7 +775,9 @@ public class cruddata extends javax.swing.JFrame {
     private javax.swing.JTextField harga;
     private javax.swing.JButton hitung;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -360,6 +785,76 @@ public class cruddata extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel13;
+    private javax.swing.JPanel jPanel14;
+    private javax.swing.JPanel jPanel15;
+    private javax.swing.JPanel jPanel16;
+    private javax.swing.JPanel jPanel17;
+    private javax.swing.JPanel jPanel18;
+    private javax.swing.JPanel jPanel19;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel20;
+    private javax.swing.JPanel jPanel21;
+    private javax.swing.JPanel jPanel22;
+    private javax.swing.JPanel jPanel23;
+    private javax.swing.JPanel jPanel24;
+    private javax.swing.JPanel jPanel25;
+    private javax.swing.JPanel jPanel26;
+    private javax.swing.JPanel jPanel27;
+    private javax.swing.JPanel jPanel28;
+    private javax.swing.JPanel jPanel29;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel30;
+    private javax.swing.JPanel jPanel31;
+    private javax.swing.JPanel jPanel32;
+    private javax.swing.JPanel jPanel33;
+    private javax.swing.JPanel jPanel34;
+    private javax.swing.JPanel jPanel35;
+    private javax.swing.JPanel jPanel36;
+    private javax.swing.JPanel jPanel37;
+    private javax.swing.JPanel jPanel38;
+    private javax.swing.JPanel jPanel39;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel40;
+    private javax.swing.JPanel jPanel41;
+    private javax.swing.JPanel jPanel42;
+    private javax.swing.JPanel jPanel43;
+    private javax.swing.JPanel jPanel44;
+    private javax.swing.JPanel jPanel45;
+    private javax.swing.JPanel jPanel46;
+    private javax.swing.JPanel jPanel47;
+    private javax.swing.JPanel jPanel48;
+    private javax.swing.JPanel jPanel49;
+    private javax.swing.JPanel jPanel50;
+    private javax.swing.JPanel jPanel51;
+    private javax.swing.JPanel jPanel52;
+    private javax.swing.JPanel jPanel53;
+    private javax.swing.JPanel jPanel54;
+    private javax.swing.JPanel jPanel55;
+    private javax.swing.JPanel jPanel56;
+    private javax.swing.JPanel jPanel57;
+    private javax.swing.JPanel jPanel58;
+    private javax.swing.JPanel jPanel59;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel60;
+    private javax.swing.JPanel jPanel61;
+    private javax.swing.JPanel jPanel62;
+    private javax.swing.JPanel jPanel63;
+    private javax.swing.JPanel jPanel64;
+    private javax.swing.JPanel jPanel65;
+    private javax.swing.JPanel jPanel66;
+    private javax.swing.JPanel jPanel67;
+    private javax.swing.JPanel jPanel68;
+    private javax.swing.JPanel jPanel69;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel70;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel labeltanggal;
     private javax.swing.JTextField lama;

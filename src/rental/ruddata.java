@@ -63,13 +63,32 @@ public class ruddata extends javax.swing.JFrame {
         harga = new javax.swing.JTextField();
         lama = new javax.swing.JTextField();
         hitung = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
         labeltanggal = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblData = new javax.swing.JTable();
         refresh = new javax.swing.JButton();
         delet = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
+        jPanel6 = new javax.swing.JPanel();
+        jPanel7 = new javax.swing.JPanel();
+        jPanel8 = new javax.swing.JPanel();
+        jPanel9 = new javax.swing.JPanel();
+        jPanel10 = new javax.swing.JPanel();
 
         TA.setColumns(20);
         TA.setRows(5);
@@ -78,6 +97,7 @@ public class ruddata extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
+        cetak.setBackground(new java.awt.Color(255, 255, 153));
         cetak.setText("Print");
         cetak.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,8 +105,9 @@ public class ruddata extends javax.swing.JFrame {
             }
         });
         getContentPane().add(cetak);
-        cetak.setBounds(240, 160, 80, 40);
+        cetak.setBounds(370, 200, 80, 40);
 
+        save.setBackground(new java.awt.Color(153, 255, 153));
         save.setText("Save");
         save.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,8 +115,9 @@ public class ruddata extends javax.swing.JFrame {
             }
         });
         getContentPane().add(save);
-        save.setBounds(240, 120, 80, 40);
+        save.setBounds(370, 160, 80, 40);
 
+        clear.setBackground(new java.awt.Color(255, 153, 153));
         clear.setText("Clear");
         clear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -103,25 +125,25 @@ public class ruddata extends javax.swing.JFrame {
             }
         });
         getContentPane().add(clear);
-        clear.setBounds(240, 80, 80, 40);
+        clear.setBounds(370, 120, 80, 40);
         getContentPane().add(name);
-        name.setBounds(10, 70, 220, 40);
+        name.setBounds(150, 120, 220, 40);
         getContentPane().add(suk);
-        suk.setBounds(10, 230, 220, 40);
+        suk.setBounds(150, 280, 220, 40);
         getContentPane().add(luar);
-        luar.setBounds(10, 270, 220, 40);
+        luar.setBounds(150, 320, 220, 40);
         getContentPane().add(alamat);
-        alamat.setBounds(10, 110, 220, 40);
+        alamat.setBounds(150, 160, 220, 40);
         getContentPane().add(no_struk);
-        no_struk.setBounds(10, 150, 220, 40);
+        no_struk.setBounds(150, 200, 220, 40);
         getContentPane().add(no_pol);
-        no_pol.setBounds(10, 190, 220, 40);
+        no_pol.setBounds(150, 240, 220, 40);
         getContentPane().add(harga);
-        harga.setBounds(10, 390, 220, 40);
+        harga.setBounds(150, 440, 220, 40);
 
         lama.setEditable(false);
         getContentPane().add(lama);
-        lama.setBounds(10, 350, 220, 40);
+        lama.setBounds(150, 400, 220, 40);
 
         hitung.setText("Hitung");
         hitung.addActionListener(new java.awt.event.ActionListener() {
@@ -130,16 +152,11 @@ public class ruddata extends javax.swing.JFrame {
             }
         });
         getContentPane().add(hitung);
-        hitung.setBounds(10, 310, 220, 40);
-
-        jLabel2.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        jLabel2.setText("jLabel1");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(20, 34, 130, 30);
+        hitung.setBounds(150, 360, 220, 40);
 
         labeltanggal.setText("TanggalNow");
         getContentPane().add(labeltanggal);
-        labeltanggal.setBounds(680, 20, 80, 30);
+        labeltanggal.setBounds(820, 20, 80, 30);
 
         tblData.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -162,8 +179,9 @@ public class ruddata extends javax.swing.JFrame {
         jScrollPane2.setViewportView(tblData);
 
         getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(342, 80, 490, 330);
+        jScrollPane2.setBounds(450, 120, 560, 330);
 
+        refresh.setBackground(new java.awt.Color(153, 255, 255));
         refresh.setText("Refresh");
         refresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -171,8 +189,9 @@ public class ruddata extends javax.swing.JFrame {
             }
         });
         getContentPane().add(refresh);
-        refresh.setBounds(240, 200, 80, 40);
+        refresh.setBounds(370, 240, 80, 40);
 
+        delet.setBackground(new java.awt.Color(255, 153, 255));
         delet.setText("Delete");
         delet.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -180,8 +199,9 @@ public class ruddata extends javax.swing.JFrame {
             }
         });
         getContentPane().add(delet);
-        delet.setBounds(240, 240, 80, 40);
+        delet.setBounds(370, 280, 80, 40);
 
+        jButton1.setBackground(new java.awt.Color(255, 102, 102));
         jButton1.setText("Exit");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -189,9 +209,101 @@ public class ruddata extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(240, 280, 80, 40);
+        jButton1.setBounds(370, 320, 80, 40);
 
-        setBounds(0, 0, 853, 509);
+        jLabel3.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        jLabel3.setText("Nama");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(60, 120, 70, 40);
+
+        jLabel4.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        jLabel4.setText("Alamat");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(60, 160, 70, 40);
+
+        jLabel5.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        jLabel5.setText("No.Struk");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(60, 200, 70, 40);
+
+        jLabel6.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        jLabel6.setText("No.Pol");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(60, 240, 70, 40);
+
+        jLabel7.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        jLabel7.setText("Pinjam");
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(60, 280, 70, 40);
+
+        jLabel8.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        jLabel8.setText("Kembali");
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(60, 320, 70, 40);
+
+        jLabel9.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        jLabel9.setText("Durasi");
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(60, 400, 70, 40);
+
+        jLabel2.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        jLabel2.setText("Harga");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(60, 440, 70, 40);
+
+        jPanel1.setBackground(new java.awt.Color(224, 224, 224));
+        jPanel1.setLayout(null);
+
+        jLabel1.setFont(new java.awt.Font("Calibri Light", 0, 24)); // NOI18N
+        jLabel1.setText("VIXMI RENT");
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(460, 20, 114, 30);
+
+        jLabel10.setFont(new java.awt.Font("Calibri Light", 0, 11)); // NOI18N
+        jLabel10.setText("JL.KEBONSARI 5 NO.7J JAMBANGAN,SURABAYA ");
+        jPanel1.add(jLabel10);
+        jLabel10.setBounds(410, 50, 250, 40);
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 1040, 120);
+
+        jPanel2.setBackground(new java.awt.Color(236, 239, 241));
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(30, 120, 420, 40);
+
+        jPanel3.setBackground(new java.awt.Color(207, 216, 220));
+        getContentPane().add(jPanel3);
+        jPanel3.setBounds(30, 160, 340, 40);
+
+        jPanel4.setBackground(new java.awt.Color(176, 190, 197));
+        getContentPane().add(jPanel4);
+        jPanel4.setBounds(30, 200, 340, 40);
+
+        jPanel5.setBackground(new java.awt.Color(144, 164, 174));
+        getContentPane().add(jPanel5);
+        jPanel5.setBounds(30, 240, 340, 40);
+
+        jPanel6.setBackground(new java.awt.Color(120, 144, 156));
+        getContentPane().add(jPanel6);
+        jPanel6.setBounds(30, 280, 340, 40);
+
+        jPanel7.setBackground(new java.awt.Color(84, 110, 122));
+        getContentPane().add(jPanel7);
+        jPanel7.setBounds(30, 360, 420, 40);
+
+        jPanel8.setBackground(new java.awt.Color(96, 125, 139));
+        getContentPane().add(jPanel8);
+        jPanel8.setBounds(30, 320, 340, 40);
+
+        jPanel9.setBackground(new java.awt.Color(69, 90, 100));
+        getContentPane().add(jPanel9);
+        jPanel9.setBounds(30, 400, 420, 40);
+
+        jPanel10.setBackground(new java.awt.Color(55, 71, 79));
+        getContentPane().add(jPanel10);
+        jPanel10.setBounds(30, 440, 980, 40);
+
+        setBounds(0, 0, 1059, 553);
     }// </editor-fold>//GEN-END:initComponents
 
     private void saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveActionPerformed
@@ -271,7 +383,7 @@ public class ruddata extends javax.swing.JFrame {
         String harg = harga.getText();
         String tang = labeltanggal.getText();
         
-        TA.append("		RENTAL MOTOR VIMI\n"+
+        TA.append("		RENTAL MOTOR VIXMI\n"+
 "                         JL.KEBONSARI 5 NO.7J JAMBANGAN,SURABAYA\n"+
 "--------------------------------------------------------------------------------------------------------------------- \n"+
 " No Nota: "+struk+"                                                                           Tanggal: "+tang+"\n"+
@@ -424,7 +536,26 @@ public class ruddata extends javax.swing.JFrame {
     private javax.swing.JTextField harga;
     private javax.swing.JButton hitung;
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel labeltanggal;
