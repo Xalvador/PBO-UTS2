@@ -35,11 +35,19 @@ public class login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel5 = new javax.swing.JPanel();
         user = new javax.swing.JTextField();
         mas = new javax.swing.JButton();
         daf = new javax.swing.JButton();
         pass = new javax.swing.JPasswordField();
         jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
+        jPanel6 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -50,8 +58,9 @@ public class login extends javax.swing.JFrame {
             }
         });
         getContentPane().add(user);
-        user.setBounds(120, 60, 180, 30);
+        user.setBounds(110, 80, 180, 40);
 
+        mas.setBackground(new java.awt.Color(153, 255, 153));
         mas.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         mas.setText("Login");
         mas.addActionListener(new java.awt.event.ActionListener() {
@@ -60,8 +69,9 @@ public class login extends javax.swing.JFrame {
             }
         });
         getContentPane().add(mas);
-        mas.setBounds(210, 210, 90, 40);
+        mas.setBounds(200, 160, 90, 40);
 
+        daf.setBackground(new java.awt.Color(255, 255, 153));
         daf.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         daf.setText("Register");
         daf.addActionListener(new java.awt.event.ActionListener() {
@@ -70,17 +80,50 @@ public class login extends javax.swing.JFrame {
             }
         });
         getContentPane().add(daf);
-        daf.setBounds(120, 210, 90, 40);
+        daf.setBounds(110, 160, 90, 40);
         getContentPane().add(pass);
-        pass.setBounds(120, 140, 180, 30);
+        pass.setBounds(110, 120, 180, 40);
 
         jLabel2.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Password");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(170, 110, 70, 20);
+        jLabel2.setBounds(30, 120, 70, 20);
 
-        setBounds(0, 0, 441, 339);
+        jLabel1.setText("Username");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(40, 80, 60, 30);
+
+        jPanel1.setBackground(new java.awt.Color(153, 255, 204));
+        jPanel1.setLayout(null);
+
+        jLabel3.setFont(new java.awt.Font("Calibri Light", 0, 24)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("LOGIN");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(110, 30, 140, 40);
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, -10, 360, 90);
+
+        jPanel2.setBackground(new java.awt.Color(102, 255, 204));
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(0, 80, 350, 40);
+
+        jPanel3.setBackground(new java.awt.Color(51, 255, 204));
+        jPanel3.setLayout(null);
+        getContentPane().add(jPanel3);
+        jPanel3.setBounds(0, 120, 350, 40);
+
+        jPanel4.setBackground(new java.awt.Color(0, 255, 204));
+        getContentPane().add(jPanel4);
+        jPanel4.setBounds(0, 160, 350, 40);
+
+        jPanel6.setBackground(new java.awt.Color(0, 204, 204));
+        getContentPane().add(jPanel6);
+        jPanel6.setBounds(0, 200, 350, 40);
+
+        setBounds(0, 0, 362, 267);
     }// </editor-fold>//GEN-END:initComponents
 
     private void userActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userActionPerformed
@@ -166,7 +209,15 @@ public class login extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton daf;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JButton mas;
     private javax.swing.JPasswordField pass;
     private javax.swing.JTextField user;
