@@ -8,21 +8,27 @@ package rental;
 import static com.itextpdf.text.pdf.PdfName.TA;
 import java.awt.print.PrinterException;
 import static java.lang.Math.toIntExact;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
  * @author cordo
  */
-public class cruddata extends javax.swing.JFrame {
+public class ruddata extends javax.swing.JFrame {
 
     /**
      * Creates new form cruddata
      */
-    public cruddata() {
+    public ruddata() {
         initComponents();
         SetTanggal();
     }
@@ -51,7 +57,6 @@ public class cruddata extends javax.swing.JFrame {
         name = new javax.swing.JTextField();
         suk = new com.toedter.calendar.JDateChooser();
         luar = new com.toedter.calendar.JDateChooser();
-        jLabel1 = new javax.swing.JLabel();
         alamat = new javax.swing.JTextField();
         no_struk = new javax.swing.JTextField();
         no_pol = new javax.swing.JTextField();
@@ -59,13 +64,11 @@ public class cruddata extends javax.swing.JFrame {
         lama = new javax.swing.JTextField();
         hitung = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
         labeltanggal = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tblData = new javax.swing.JTable();
+        refresh = new javax.swing.JButton();
+        delet = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
 
         TA.setColumns(20);
@@ -82,7 +85,7 @@ public class cruddata extends javax.swing.JFrame {
             }
         });
         getContentPane().add(cetak);
-        cetak.setBounds(320, 140, 55, 23);
+        cetak.setBounds(240, 160, 80, 40);
 
         save.setText("Save");
         save.addActionListener(new java.awt.event.ActionListener() {
@@ -91,7 +94,7 @@ public class cruddata extends javax.swing.JFrame {
             }
         });
         getContentPane().add(save);
-        save.setBounds(320, 100, 73, 23);
+        save.setBounds(240, 120, 80, 40);
 
         clear.setText("Clear");
         clear.addActionListener(new java.awt.event.ActionListener() {
@@ -100,29 +103,25 @@ public class cruddata extends javax.swing.JFrame {
             }
         });
         getContentPane().add(clear);
-        clear.setBounds(320, 60, 57, 23);
+        clear.setBounds(240, 80, 80, 40);
         getContentPane().add(name);
-        name.setBounds(50, 70, 140, 30);
+        name.setBounds(10, 70, 220, 40);
         getContentPane().add(suk);
-        suk.setBounds(70, 230, 91, 20);
+        suk.setBounds(10, 230, 220, 40);
         getContentPane().add(luar);
-        luar.setBounds(70, 270, 91, 20);
-
-        jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(20, 360, 34, 14);
+        luar.setBounds(10, 270, 220, 40);
         getContentPane().add(alamat);
-        alamat.setBounds(50, 110, 140, 30);
+        alamat.setBounds(10, 110, 220, 40);
         getContentPane().add(no_struk);
-        no_struk.setBounds(50, 150, 140, 30);
+        no_struk.setBounds(10, 150, 220, 40);
         getContentPane().add(no_pol);
-        no_pol.setBounds(50, 190, 140, 30);
+        no_pol.setBounds(10, 190, 220, 40);
         getContentPane().add(harga);
-        harga.setBounds(50, 360, 140, 30);
+        harga.setBounds(10, 390, 220, 40);
 
         lama.setEditable(false);
         getContentPane().add(lama);
-        lama.setBounds(50, 320, 140, 30);
+        lama.setBounds(10, 350, 220, 40);
 
         hitung.setText("Hitung");
         hitung.addActionListener(new java.awt.event.ActionListener() {
@@ -131,50 +130,68 @@ public class cruddata extends javax.swing.JFrame {
             }
         });
         getContentPane().add(hitung);
-        hitung.setBounds(80, 290, 63, 23);
+        hitung.setBounds(10, 310, 220, 40);
 
+        jLabel2.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         jLabel2.setText("jLabel1");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(60, 50, 34, 14);
-
-        jLabel3.setText("jLabel1");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(40, 110, 34, 14);
-
-        jLabel4.setText("jLabel1");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(20, 150, 34, 14);
-
-        jLabel5.setText("jLabel1");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(30, 190, 34, 14);
-
-        jLabel6.setText("jLabel1");
-        getContentPane().add(jLabel6);
-        jLabel6.setBounds(40, 220, 34, 14);
-
-        jLabel7.setText("jLabel1");
-        getContentPane().add(jLabel7);
-        jLabel7.setBounds(50, 260, 34, 14);
-
-        jLabel8.setText("jLabel1");
-        getContentPane().add(jLabel8);
-        jLabel8.setBounds(30, 320, 34, 14);
+        jLabel2.setBounds(20, 34, 130, 30);
 
         labeltanggal.setText("TanggalNow");
         getContentPane().add(labeltanggal);
-        labeltanggal.setBounds(500, 20, 80, 30);
+        labeltanggal.setBounds(680, 20, 80, 30);
 
-        jButton1.setText("Database");
+        tblData.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "Nama", "Alamat", "No Struk", "No Pol", "Peminjaman", "Pengembalian", "Harga"
+            }
+        ));
+        tblData.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tblDataMouseClicked(evt);
+            }
+        });
+        jScrollPane2.setViewportView(tblData);
+
+        getContentPane().add(jScrollPane2);
+        jScrollPane2.setBounds(342, 80, 490, 330);
+
+        refresh.setText("Refresh");
+        refresh.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                refreshActionPerformed(evt);
+            }
+        });
+        getContentPane().add(refresh);
+        refresh.setBounds(240, 200, 80, 40);
+
+        delet.setText("Delete");
+        delet.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deletActionPerformed(evt);
+            }
+        });
+        getContentPane().add(delet);
+        delet.setBounds(240, 240, 80, 40);
+
+        jButton1.setText("Exit");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(320, 180, 90, 30);
+        jButton1.setBounds(240, 280, 80, 40);
 
-        setBounds(0, 0, 659, 464);
+        setBounds(0, 0, 853, 509);
     }// </editor-fold>//GEN-END:initComponents
 
     private void saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveActionPerformed
@@ -205,7 +222,8 @@ public class cruddata extends javax.swing.JFrame {
                     +harga.getText()+"')";
             int status = KoneksiDB.execute(SQL);
             if(status==1){
-                JOptionPane.showMessageDialog(this,"Data Berhasil ditambahkan","Sukses",JOptionPane.INFORMATION_MESSAGE);            
+                JOptionPane.showMessageDialog(this,"Data Berhasil ditambahkan","Sukses",JOptionPane.INFORMATION_MESSAGE);
+                SelectedData();
             }else{
                 JOptionPane.showMessageDialog(this,"Data Gagal ditambahkan","Gagal",JOptionPane.WARNING_MESSAGE);
             }
@@ -304,9 +322,61 @@ public class cruddata extends javax.swing.JFrame {
             
     }//GEN-LAST:event_cetakActionPerformed
 
+    private void tblDataMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblDataMouseClicked
+        // TODO add your handling code here:
+        int baris = tblData.getSelectedRow();
+        if (baris != 1) {
+            name.setText(tblData.getValueAt(baris, 0).toString());
+            alamat.setText(tblData.getValueAt(baris, 1).toString());
+            no_struk.setText(tblData.getValueAt(baris, 2).toString());
+            no_pol.setText(tblData.getValueAt(baris, 3).toString());
+
+            SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd");
+            Date dateFormat = null;
+            try {
+                dateFormat = date.parse(tblData.getValueAt(baris, 4).toString());
+                dateFormat = date.parse(tblData.getValueAt(baris, 5).toString());
+            }
+            catch (ParseException ex)
+            {
+                Logger.getLogger(ruddata.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+            suk.setDate(dateFormat);
+            suk.setDate(dateFormat);
+            harga.setText(tblData.getValueAt(baris, 6).toString());
+        }
+    }//GEN-LAST:event_tblDataMouseClicked
+
+    private void refreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshActionPerformed
+        // TODO add your handling code here:
+        SelectedData();
+    }//GEN-LAST:event_refreshActionPerformed
+
+    private void deletActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deletActionPerformed
+        // TODO add your handling code here:
+        int baris = tblData.getSelectedRow();
+        if (baris != -1) 
+        {
+            String Nama = tblData.getValueAt(baris, 0).toString();
+            String SQL = "DELETE FROM datapinjam WHERE Nama='"+Nama+"'";
+            int status = KoneksiDB.execute(SQL);
+            if (status==1) 
+            {
+                JOptionPane.showMessageDialog(this, "Data berhasil dihapus", "Sukses", JOptionPane.INFORMATION_MESSAGE);
+                SelectedData();
+                
+            } else {
+                JOptionPane.showMessageDialog(this, "Data gagal dihapus", "Gagal", JOptionPane.WARNING_MESSAGE);
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "Pilih Baris Data terlebih dahulu", "Error", JOptionPane.WARNING_MESSAGE);
+        }
+    }//GEN-LAST:event_deletActionPerformed
+
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        new ruddata().show();
+        dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -326,20 +396,21 @@ public class cruddata extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(cruddata.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ruddata.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(cruddata.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ruddata.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(cruddata.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ruddata.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(cruddata.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ruddata.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new cruddata().setVisible(true);
+                new ruddata().setVisible(true);
             }
         });
     }
@@ -349,29 +420,46 @@ public class cruddata extends javax.swing.JFrame {
     private javax.swing.JTextField alamat;
     private javax.swing.JButton cetak;
     private javax.swing.JButton clear;
+    private javax.swing.JButton delet;
     private javax.swing.JTextField harga;
     private javax.swing.JButton hitung;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel labeltanggal;
     private javax.swing.JTextField lama;
     private com.toedter.calendar.JDateChooser luar;
     private javax.swing.JTextField name;
     private javax.swing.JTextField no_pol;
     private javax.swing.JTextField no_struk;
+    private javax.swing.JButton refresh;
     private javax.swing.JButton save;
     private com.toedter.calendar.JDateChooser suk;
+    private javax.swing.JTable tblData;
     // End of variables declaration//GEN-END:variables
 
     public void SelectedData() {
-        
+        String kolom[] = {"Nama","Alamat","NoStruk","NoPol","TanggalPinjam","TangalKembali","Harga"};
+        DefaultTableModel dtm = new DefaultTableModel(null, kolom);
+        String SQL = "SELECT * FROM datapinjam";
+        ResultSet rs = KoneksiDB.executeQuery(SQL);
+        try {
+            while(rs.next()) {
+                String Nama = rs.getString(1);
+                String Alamat = rs.getString(2);
+                String NoStruk = rs.getString(3);
+                String NoPol = rs.getString(4);
+                String TanggalPinjam = rs.getString(5);
+                String TanggalKembali = rs.getString(6);
+                String Harga = rs.getString(7);
+                String data[] = {Nama,Alamat,NoStruk,NoPol,TanggalPinjam,TanggalKembali,Harga};
+                dtm.addRow(data);
+            }
+        } 
+        catch (SQLException ex) {
+            Logger.getLogger(ruddata.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        tblData.setModel(dtm);
     }
 }
