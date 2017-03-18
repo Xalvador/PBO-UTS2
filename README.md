@@ -1,8 +1,15 @@
 # Judul Project
-<p>UTS Semester 2 PBO</p>
-# Screenshoot
+<p>UTS Semester 2 PBO</p><br>
+
+# Video
 <p>
-#Indentitas
+<p align="center">
+  <img src="https://cloud.githubusercontent.com/assets/16008580/24067634/10e8a290-0bb2-11e7-9bfa-1981ddc4199f.PNG" /><br>
+  https://youtu.be/LCVkdKcHRAY
+</p>
+
+<br>
+# Indentitas
 <p>
 Nama: Ridhwan Rofianto <br>
 Kelas: XI RPL 2 <br>
