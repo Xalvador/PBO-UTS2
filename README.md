@@ -1,11 +1,11 @@
 # Judul Project
 <p>UTS Semester 2 PBO</p><br>
 
-# Video
+# Picture
 <p>
 <p align="center">
-  <img src="https://cloud.githubusercontent.com/assets/16008580/24067634/10e8a290-0bb2-11e7-9bfa-1981ddc4199f.PNG" /><br>
-  https://youtu.be/LCVkdKcHRAY
+  <img src="https://cloud.githubusercontent.com/assets/16008580/26643808/c9f3107e-465c-11e7-83fc-dcf22cd220b5.PNG" /><br>
+
 </p>
 
 <br>
